@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+How to Install :
+1. Go to main branch
+2. Download nvm + npm + node (or whatever that is needed)
+3. Clone repository `git clone https://github.com/Kyzure/cs4249-eatigo-website-redesign.git`
+5. Open command prompt and go to directory you cloen repository
+4. Create new branch (Unless u wanna push to main lmao) `git checkout -b your-branch-name`
+5. Run the command: `npm install` (idk if this works)
+
+How to Edit (Once you install all the shit):
+1. Run the command: `npm start` (to start locally at localhost 3000)
+2. "Edit the code and see changes"
+3. Push to your branch and do merge request (or push to main if u got balls): `git push your-branch-name`
+4. Change branch to main: `git checkout main`
+5. Run the command: `npm run deploy`(Pushes the changes to deployment, or the github pages)
+6. Change back to your branch: `git checkout your-branch-name`
+
 ## Available Scripts
 
 In the project directory, you can run:
