@@ -1,7 +1,7 @@
 {
   "name": "cs4249-eatigo-website-redesign",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://kyzure.github.io/react-gh-pages",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",
