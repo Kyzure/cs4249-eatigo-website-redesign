@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.eatigo-title {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.main-search-bar {
+  width: 70%;
+  min-width: 400px;
+  margin: auto;
+  justify-content: center;  
+}
+
