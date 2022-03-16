@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/cs4249-eatigo-website-redesign/static/css/main.073c9b0a.css",
-    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.d98da4f3.js",
+    "main.css": "/cs4249-eatigo-website-redesign/static/css/main.fc910d07.css",
+    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.59495eb4.js",
     "static/js/787.e28cefcf.chunk.js": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js",
-    "static/media/logo.svg": "/cs4249-eatigo-website-redesign/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/food-background.jpg": "/cs4249-eatigo-website-redesign/static/media/food-background.2b3a0a494b30bf14f3b6.jpg",
+    "static/media/eatigo.png": "/cs4249-eatigo-website-redesign/static/media/eatigo.127e364ac8de80032319.png",
+    "static/media/eatigo-home-title.svg": "/cs4249-eatigo-website-redesign/static/media/eatigo-home-title.c8026fcaf0c93e7c6cfce11cd8563ea2.svg",
     "index.html": "/cs4249-eatigo-website-redesign/index.html",
-    "main.073c9b0a.css.map": "/cs4249-eatigo-website-redesign/static/css/main.073c9b0a.css.map",
-    "main.d98da4f3.js.map": "/cs4249-eatigo-website-redesign/static/js/main.d98da4f3.js.map",
+    "main.fc910d07.css.map": "/cs4249-eatigo-website-redesign/static/css/main.fc910d07.css.map",
+    "main.59495eb4.js.map": "/cs4249-eatigo-website-redesign/static/js/main.59495eb4.js.map",
     "787.e28cefcf.chunk.js.map": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d98da4f3.js"
+    "static/css/main.fc910d07.css",
+    "static/js/main.59495eb4.js"
   ]
 }
