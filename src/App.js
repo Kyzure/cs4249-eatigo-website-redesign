@@ -30,11 +30,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <ScopedCssBaseline enableColorScheme={true}>
-        <HashRouter>
+        <HashRouter basename='/'>
           <Routes>
-            <Route exact path="/cs4249-eatigo-website-redesign" element={<Home />} />
-            <Route exact path="/cs4249-eatigo-website-redesign/original-home" element={<OriginalHome />} />
-            <Route exact path="/cs4249-eatigo-website-redesign/redesigned-home" element={<RedesignedHome />} />
+            <Route path="" element={<Home />} />
+            <Route path="/original-home" element={<OriginalHome />} />
+            <Route path="/redesigned-home" element={<RedesignedHome />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>

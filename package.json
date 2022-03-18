@@ -1,7 +1,7 @@
 {
   "name": "cs4249-eatigo-website-redesign",
   "version": "0.1.0",
-  "homepage": "https://kyzure.github.io/cs4249-eatigo-website-redesign",
+  "homepage": "https://kyzure.github.io/cs4249-eatigo-website-redesign/#/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",
