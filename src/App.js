@@ -32,9 +32,9 @@ function App() {
       <ScopedCssBaseline enableColorScheme={true}>
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/original-home" element={<OriginalHome />} />
-            <Route path="/redesigned-home" element={<RedesignedHome />} />
+            <Route path="/cs4249-eatigo-website-redesign" element={<Home />} />
+            <Route path="/cs4249-eatigo-website-redesign/original-home" element={<OriginalHome />} />
+            <Route path="/cs4249-eatigo-website-redesign/redesigned-home" element={<RedesignedHome />} />
           </Routes>
         </Router>
       </ScopedCssBaseline>
