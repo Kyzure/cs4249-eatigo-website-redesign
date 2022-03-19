@@ -5,6 +5,8 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home.js';
 import OriginalHome from './pages/OriginalHome.js';
 import RedesignedHome from './pages/RedesignedHome.js';
+import OriginalResult from './pages/OriginalResult.js';
+import RedesignedResult from './pages/RedesignedResult.js';
 
 const theme = createTheme({
   palette: {
@@ -17,7 +19,11 @@ const theme = createTheme({
       dark: '#E2E2E2'
     },
     tertiary: {
-      main: '#333333'
+      main: '#777777',
+      dark: '#333333'
+    },
+    background: {
+      default: '#F8F8F8'
     },
     text: {
       primary: '#333333'
@@ -26,7 +32,7 @@ const theme = createTheme({
 });
 
 function App() {
-   
+  
   return (
     <ThemeProvider theme={theme}>
       <ScopedCssBaseline enableColorScheme={true}>
@@ -35,6 +41,8 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="/original-home" element={<OriginalHome />} />
             <Route path="/redesigned-home" element={<RedesignedHome />} />
+            <Route path="/original-result" element={<OriginalResult />} />
+            <Route path="/redesigned-result" element={<RedesignedResult />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>

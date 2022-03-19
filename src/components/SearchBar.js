@@ -1,5 +1,6 @@
 import * as React from 'react';
 import '../styles/Home.scss';
+import {useNavigate} from 'react-router-dom';
 
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
@@ -37,11 +38,28 @@ const IconButtonStyled = styled(IconButton)(({ theme }) => ({
 
 function HomeDisplay(props) {
   const [searchValue, setSearchValue] = React.useState("");
+  const navigate = useNavigate();
 
-  const search = (e) => {
-    console.log(searchValue);
-    e.preventDefault();
-  };
+  function searchFunc(e) {
+    let path = ""
+    let val = searchValue
+    if (searchValue.toLowerCase() === "steakhouse") {
+      val = "search=steakhouse"
+    } else if (searchValue.toLowerCase() === "noodles") {
+      val = "search=noodles"
+    } else if (searchValue.toLowerCase() === "ramen") {
+      val = "search=ramen"
+    } else {
+      e.preventDefault();
+      return
+    }
+    if (props.isRedesigned) {
+      path = "/redesigned-result?" + val;
+    } else {
+      path = "/original-result?" + val;
+    }
+    return navigate(path, { replace: true });
+  }
 
   const setSearchValueFunc = (e) => {
     setSearchValue(e.target.value);
@@ -52,7 +70,7 @@ function HomeDisplay(props) {
       component="form"
       noValidate
       autoComplete="off"
-      onSubmit={ search }>
+      onSubmit={ searchFunc }>
       <TextFieldStyled
         sx={ props.styling }
         label="Try searching for a location, cuisine, or restaurant name!"
@@ -68,7 +86,7 @@ function HomeDisplay(props) {
                 type="submit"
                 disableRipple={true}
                 aria-label="Search"
-                onClick={ search }
+                onClick={ searchFunc }
                 label="Search">
                   <SearchIcon />
               </IconButtonStyled>
