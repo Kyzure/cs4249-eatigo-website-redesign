@@ -3,7 +3,6 @@ import '../styles/Header.scss';
 import EatigoIcon from "../assets/eatigo.png";
 import SearchBar from "./SearchBar.js";
 
-import { styled } from '@mui/system';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,10 +14,17 @@ function Header (props) {
   function GetSearchBar() {
     if (props.isRedesigned) {
       return <SearchBar
+        isRedesigned={ props.isRedesigned }
         styling={{ width: '70%', minWidth: '700px', margin: 'auto', justifyContent: 'center' }} 
         size="small"
         variant="outlined"/>;
     }
+  }
+  
+  let ref = "/cs4249-eatigo-website-redesign/#/original-home";
+
+  if (props.isRedesigned) {
+    ref = "/cs4249-eatigo-website-redesign/#/redesigned-home";
   }
   
   return (
@@ -31,7 +37,7 @@ function Header (props) {
             <Button
               disableRipple={true}
               variant="dense"
-              href="/"
+              href={ ref }
               size="small"
               className="eatigo-homepage">
               <img className="eatigo-icon" src={EatigoIcon} alt="Eatigo Homepage"/>
