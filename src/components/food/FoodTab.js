@@ -3,7 +3,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-function FoodPageTab(props) {
+function FoodTab(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -23,4 +23,4 @@ function FoodPageTab(props) {
   );
 }
 
-export default FoodPageTab;
+export default FoodTab;

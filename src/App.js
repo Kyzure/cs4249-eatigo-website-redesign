@@ -7,7 +7,7 @@ import OriginalHome from './pages/OriginalHome.js';
 import RedesignedHome from './pages/RedesignedHome.js';
 import OriginalResult from './pages/OriginalResult.js';
 import RedesignedResult from './pages/RedesignedResult.js';
-import OriginalFoodPage from './pages/OriginalFoodPage';
+import OriginalFood from './pages/OriginalFood.js';
 
 const theme = createTheme({
   palette: {
@@ -44,7 +44,7 @@ function App() {
             <Route path="/redesigned-home" element={<RedesignedHome />} />
             <Route path="/original-result" element={<OriginalResult />} />
             <Route path="/redesigned-result" element={<RedesignedResult />} />
-            <Route path="/original-food-page" element={<OriginalFoodPage />} />
+            <Route path="/original-food-page" element={<OriginalFood />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>

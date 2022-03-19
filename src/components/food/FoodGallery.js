@@ -11,7 +11,7 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-function FoodPageGallery() {
+function FoodGallery() {
   return (
     <ImageList
       variant="quilted"
@@ -30,7 +30,7 @@ function FoodPageGallery() {
   );
 }
 
-export default FoodPageGallery;
+export default FoodGallery;
 
 const itemData = [
   {

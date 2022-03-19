@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-import FoodPageTab from "./FoodPageTab";
+import FoodTab from "./FoodTab";
 
 function a11yProps(index) {
   return {
@@ -12,7 +12,7 @@ function a11yProps(index) {
   };
 }
 
-function FoodPageTabs() {
+function FoodTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -28,17 +28,17 @@ function FoodPageTabs() {
           <Tab label="reviews" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <FoodPageTab value={value} index={0}>
+      <FoodTab value={value} index={0}>
         Item One
-      </FoodPageTab>
-      <FoodPageTab value={value} index={1}>
+      </FoodTab>
+      <FoodTab value={value} index={1}>
         Item Two
-      </FoodPageTab>
-      <FoodPageTab value={value} index={2}>
+      </FoodTab>
+      <FoodTab value={value} index={2}>
         Item Three
-      </FoodPageTab>
+      </FoodTab>
     </Box>
   );
 }
 
-export default FoodPageTabs;
+export default FoodTabs;
