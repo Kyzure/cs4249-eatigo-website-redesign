@@ -6,12 +6,13 @@ import SearchBar from './SearchBar.js'
 import Box from '@mui/material/Box';
 import EatigoTitle from '../assets/eatigo-home-title.svg';
 
-function HomeDisplay() {
+function HomeDisplay(props) {
   return (
     <div style={{ backgroundImage: `url(${Food})` }} className="background-image">
       <Box className="eatigo-title">
         <img src={ EatigoTitle } alt="Eatigo Title"/>
         <SearchBar
+          isRedesigned={ props.isRedesigned }
           styling={{ width: '50%', minWidth: '300px', margin: 'auto', justifyContent: 'center' }} 
           size="large"
           variant="filled"/>
