@@ -9,6 +9,7 @@ function Home() {
       <Typography variant="h6">Here are the links to the original / redesigned sites:</Typography>
       <Link component={Link} href="/cs4249-eatigo-website-redesign/#/original-home"><br/>Original Home <br/><br/></Link>
       <Link component={Link} href="/cs4249-eatigo-website-redesign/#/redesigned-home">Redesigned Home <br/><br/></Link>
+      <Link component={Link} href="/cs4249-eatigo-website-redesign/#/original-food-page">Original Food Page <br/><br/></Link>
     </div>
   );
 }

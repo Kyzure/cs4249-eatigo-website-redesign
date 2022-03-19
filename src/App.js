@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home.js';
 import OriginalHome from './pages/OriginalHome.js';
 import RedesignedHome from './pages/RedesignedHome.js';
+import OriginalFoodPage from './pages/OriginalFoodPage';
 
 const theme = createTheme({
   palette: {
@@ -35,6 +36,7 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="/original-home" element={<OriginalHome />} />
             <Route path="/redesigned-home" element={<RedesignedHome />} />
+            <Route path="/original-food-page" element={<OriginalFoodPage />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>
