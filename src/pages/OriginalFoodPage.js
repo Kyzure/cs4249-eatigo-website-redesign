@@ -17,7 +17,7 @@ import FoodPageTabs from '../components/FoodPageTabs.js';
 import Header from '../components/Header.js';
 import reservation from "../assets/reservation-panel.png";
 
-function OriginalFoodPage() {
+function OriginalFoodPage(props) {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
