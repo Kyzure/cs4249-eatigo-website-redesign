@@ -1,18 +1,31 @@
 {
   "files": {
     "main.css": "/cs4249-eatigo-website-redesign/static/css/main.b7222a85.css",
-    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.e3ad4cd2.js",
+    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.7bf4ffff.js",
     "static/js/787.e28cefcf.chunk.js": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js",
     "static/media/food-background.jpg": "/cs4249-eatigo-website-redesign/static/media/food-background.2b3a0a494b30bf14f3b6.jpg",
+    "static/media/Japanese2.png": "/cs4249-eatigo-website-redesign/static/media/Japanese2.21ce4da5fe19454611d1.png",
+    "static/media/Japanese3.png": "/cs4249-eatigo-website-redesign/static/media/Japanese3.442a5812e8cc6d8c2583.png",
+    "static/media/SteakHouse3.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse3.595832114ededb9660cc.png",
+    "static/media/Noodles2.png": "/cs4249-eatigo-website-redesign/static/media/Noodles2.215f17bc79fd3f40ebb2.png",
+    "static/media/Japanese1.png": "/cs4249-eatigo-website-redesign/static/media/Japanese1.bdaa54f2c89c5cb1c911.png",
+    "static/media/SteakHouse2.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse2.e530bd3c064312128e93.png",
+    "static/media/SteakHouse4.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse4.75eda74b20d2074ff6a0.png",
+    "static/media/Noodles1.png": "/cs4249-eatigo-website-redesign/static/media/Noodles1.bbb1d7dd91a19b6a0d16.png",
+    "static/media/Noodles5.png": "/cs4249-eatigo-website-redesign/static/media/Noodles5.b49cd98fed87e4e7667f.png",
+    "static/media/SteakHouse1.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse1.696216bb1cd7cbb7135f.png",
+    "static/media/Noodles4.png": "/cs4249-eatigo-website-redesign/static/media/Noodles4.b56abf23b90f763ebce4.png",
+    "static/media/Noodles3.png": "/cs4249-eatigo-website-redesign/static/media/Noodles3.993982e5f64130dd6038.png",
     "static/media/eatigo.png": "/cs4249-eatigo-website-redesign/static/media/eatigo.127e364ac8de80032319.png",
+    "static/media/ViewMap.png": "/cs4249-eatigo-website-redesign/static/media/ViewMap.75d8ccd6dcb2aa4ff280.png",
     "static/media/eatigo-home-title.svg": "/cs4249-eatigo-website-redesign/static/media/eatigo-home-title.60626a0de0b7ed04e98bdeb257c68ccd.svg",
     "index.html": "/cs4249-eatigo-website-redesign/index.html",
     "main.b7222a85.css.map": "/cs4249-eatigo-website-redesign/static/css/main.b7222a85.css.map",
-    "main.e3ad4cd2.js.map": "/cs4249-eatigo-website-redesign/static/js/main.e3ad4cd2.js.map",
+    "main.7bf4ffff.js.map": "/cs4249-eatigo-website-redesign/static/js/main.7bf4ffff.js.map",
     "787.e28cefcf.chunk.js.map": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7222a85.css",
-    "static/js/main.e3ad4cd2.js"
+    "static/js/main.7bf4ffff.js"
   ]
 }
