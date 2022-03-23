@@ -41,7 +41,8 @@ function HomeDisplay(props) {
   const navigate = useNavigate();
 
   function searchFunc(e) {
-    let path = ""
+    let path = "/result?" + props.path + "&"
+
     let val = searchValue
     if (searchValue.toLowerCase() === "steakhouse") {
       val = "search=steakhouse"
@@ -53,11 +54,9 @@ function HomeDisplay(props) {
       e.preventDefault();
       return
     }
-    if (props.isRedesigned) {
-      path = "/redesigned-result?" + val;
-    } else {
-      path = "/original-result?" + val;
-    }
+
+    path += val
+
     return navigate(path, { replace: true });
   }
 

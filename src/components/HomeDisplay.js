@@ -12,7 +12,11 @@ function HomeDisplay(props) {
       <Box className="eatigo-title">
         <img src={ EatigoTitle } alt="Eatigo Title"/>
         <SearchBar
-          isRedesigned={ props.isRedesigned }
+          path = { props.path }
+          resetsize={ props.resetsize }
+          filters={ props.filters }
+          breadcrumbs={ props.breadcrumbs }
+          searchbar={ props.searchbar }
           styling={{ width: '50%', minWidth: '300px', margin: 'auto', justifyContent: 'center' }} 
           size="large"
           variant="filled"/>

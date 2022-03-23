@@ -2,14 +2,14 @@ import * as React from 'react';
 
 import { useLocation } from "react-router-dom";
 import Header from '../components/Header.js';
-import HomeDisplay from '../components/HomeDisplay.js';
+import ResultDisplay from '../components/result/ResultDisplay.js';
 
 function useQuery() {
   const { search } = useLocation();
   return React.useMemo(() => new URLSearchParams(search), [search]);
 }
 
-function Home() {
+function Result() {
   let query = useQuery();
 
   let path = "breadcrumbs=" + query.get("breadcrumbs").toString() + "&" +
@@ -27,14 +27,15 @@ function Home() {
           resetsize={ query.get("resetsize") }
           searchbar={ query.get("searchbar") === 'true' }/>
       </div>
-      <HomeDisplay 
+      <ResultDisplay
         path = { path }
         breadcrumbs={ query.get("breadcrumbs") === 'true' }
         filters={ query.get("filters") === 'true' }
         resetsize={ query.get("resetsize") }
-        searchbar={ query.get("searchbar") === 'true' }/>
+        searchbar={ query.get("searchbar") === 'true' }
+        search={ query.get("search") }/>
     </div>
   );
 }
 
-export default Home;
+export default Result;
