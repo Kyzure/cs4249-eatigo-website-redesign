@@ -7,6 +7,7 @@ function ResultCard(props) {
   const navigate = useNavigate();
   
   function clickCard(e) {
+    console.log(props.path)
     if (props.searchType == null) {
       e.preventDefault();
       return 

@@ -122,7 +122,7 @@ function ResultFilters(props) {
             value={ checklist[filters] }
             checked={ setChecklist[filters] }/>}/>
     }
-    return <></>
+    return (null)
   });
 
   let cuisineNew = cuisineFilters.map((filters) => {
@@ -134,14 +134,14 @@ function ResultFilters(props) {
             value={ cuisineChecklist[filters] }
             checked={ cuisineChecklist[filters] }/>}/>
     }
-    return <></>
+    return (null)
   });
 
   if (props.filters) {
     return (
       <Stack direction="column" spacing={'20px'} sx={{ padding: '10px 10px 10px 10px', backgroundColor: "#FFFFFF" }}>
         <Stack justifyContent="space-between" direction="row">
-          <Typography variant="h5" display="inline" sx={{ "font-weight": "bold" }}>
+          <Typography variant="h5" display="inline" sx={{ "fontWeight": "bold" }}>
             Filters
           </Typography>
           <Button size={ props.resetsize.toString() } color="primary" variant="outlined" onClick={ reset }>

@@ -75,13 +75,12 @@ const noodlesList = [
 ];
 
 function ResultCardList(props) {
-
   function CardList() {
     if (props.isFilterSelected && props.searchType !== "steakhouse") {
       if (props.searchType === "noodles") {
-        return <ResultCard searchType={ props.searchType } picture={Noodles2} />
+        return <ResultCard searchType={ props.searchType } picture={Noodles2} path={ props.path } />
       } else {
-        return <ResultCard searchType={ props.searchType } picture={Ramen3} />
+        return <ResultCard searchType={ props.searchType } picture={Ramen3} path={ props.path } />
       }
     } else {
       let chosen = ramenList
