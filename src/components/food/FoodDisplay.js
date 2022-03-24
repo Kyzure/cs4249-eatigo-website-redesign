@@ -13,12 +13,16 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import '../../styles/Food.scss';
 import FoodGallery from './FoodGallery.js';
 import FoodTabs from './FoodTabs.js';
+import BreadCrumbs from '../BreadCrumbs.js'
 import reservation from "../../assets/reservation-panel.png";
 
 function FoodDisplay(props) {
 
   return (
     <Box className="food-body">
+        <Box>
+          <BreadCrumbs path={props.path} page="Food" search={props.search} />
+        </Box>
       {titleSwitch(props.search)}
       <Stack direction="row" gap={2}>
         {scoreSwitch(props.search)}
