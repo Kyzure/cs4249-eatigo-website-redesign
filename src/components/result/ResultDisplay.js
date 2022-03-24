@@ -44,7 +44,7 @@ function ResultDisplay(props) {
   return (
     <Box style={{ 'padding': '100px 250px 100px 250px' }}>
       <Box sx={{ padding: "0px 0px 20px 0px" }}>
-        <BreadCrumbs path={props.path} page="Result" />
+        <BreadCrumbs path={props.path} page="Result" breadcrumbs={ props.breadcrumbs }/>
       </Box>
       <Stack direction="column" spacing={'30px'}>
         <Stack direction="row" sx={{ height: '135px', padding: '40px 20px 40px 20px', backgroundColor: "#FFFFFF" }} spacing={'30px'}>
