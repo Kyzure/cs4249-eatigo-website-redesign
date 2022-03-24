@@ -76,6 +76,7 @@ function ResultDisplay(props) {
               <img style={{ width: '100%', height: '100%' }} src={ ViewMap } alt="View Map"/>
             </Button>
             <ResultFilters 
+              filters={ props.filters }
               searchType={ props.search }
               resetsize={ props.resetsize }
               isFilterSelected={ isFilterSelected }
