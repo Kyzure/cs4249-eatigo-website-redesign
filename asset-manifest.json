@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cs4249-eatigo-website-redesign/static/css/main.b7222a85.css",
-    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.7bf4ffff.js",
+    "main.css": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css",
+    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.98c32822.js",
     "static/js/787.e28cefcf.chunk.js": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js",
     "static/media/food-background.jpg": "/cs4249-eatigo-website-redesign/static/media/food-background.2b3a0a494b30bf14f3b6.jpg",
     "static/media/Japanese2.png": "/cs4249-eatigo-website-redesign/static/media/Japanese2.21ce4da5fe19454611d1.png",
@@ -18,14 +18,15 @@
     "static/media/Noodles3.png": "/cs4249-eatigo-website-redesign/static/media/Noodles3.993982e5f64130dd6038.png",
     "static/media/eatigo.png": "/cs4249-eatigo-website-redesign/static/media/eatigo.127e364ac8de80032319.png",
     "static/media/ViewMap.png": "/cs4249-eatigo-website-redesign/static/media/ViewMap.75d8ccd6dcb2aa4ff280.png",
+    "static/media/reservation-panel.png": "/cs4249-eatigo-website-redesign/static/media/reservation-panel.379d3352ce35051767a5.png",
     "static/media/eatigo-home-title.svg": "/cs4249-eatigo-website-redesign/static/media/eatigo-home-title.60626a0de0b7ed04e98bdeb257c68ccd.svg",
     "index.html": "/cs4249-eatigo-website-redesign/index.html",
-    "main.b7222a85.css.map": "/cs4249-eatigo-website-redesign/static/css/main.b7222a85.css.map",
-    "main.7bf4ffff.js.map": "/cs4249-eatigo-website-redesign/static/js/main.7bf4ffff.js.map",
+    "main.1d1efd00.css.map": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css.map",
+    "main.98c32822.js.map": "/cs4249-eatigo-website-redesign/static/js/main.98c32822.js.map",
     "787.e28cefcf.chunk.js.map": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7222a85.css",
-    "static/js/main.7bf4ffff.js"
+    "static/css/main.1d1efd00.css",
+    "static/js/main.98c32822.js"
   ]
 }
