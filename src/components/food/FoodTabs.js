@@ -1,9 +1,18 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+import * as React from 'react'
+import Box from '@mui/material/Box'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import Typography from '@mui/material/Typography'
+
+import ramen_menu from "../../assets/ramen_menu.png"
+import ramen_about from "../../assets/ramen_about.png"
+import ramen_reviews from "../../assets/ramen_reviews.png"
+import steakhouse_menu from "../../assets/steakhouse_menu.png"
+import steakhouse_about from "../../assets/steakhouse_about.png"
+import steakhouse_reviews from "../../assets/steakhouse_reviews.png"
+import noodles_menu from "../../assets/noodles_menu.png"
+import noodles_about from "../../assets/noodles_about.png"
+import noodles_reviews from "../../assets/noodles_reviews.png"
 
 function FoodTabs({search}) {
   const [value, setValue] = React.useState(0);
@@ -66,135 +75,38 @@ function FoodTab(props) {
 function menuSwitch(search) {
   switch (search) {
     case "ramen":
-      return (
-        <>
-          recommended menu<br />
-          <br />
-          Promotion cannot be applied with any other in-house promotions. Please refer to the special conditions below for more details.<br />
-          <br />
-          <br />
-          * Menu and pricing subject to change without notice.<br />
-          ** All prices in SGD and are exclusive of GST and service charge unless otherwise indicated under special conditions.<br />
-          <br />
-          <br />
-          special conditions
-          <Divider light={false} variant="full-width" flexItem />
-          Deposit is required to secure the reservations. Do notify the restaurant 1 day before your reservation date if you wish to cancel and deposit will be refunded to you accordingly.<br />
-          <br />
-          12-Course Omakase Meal for 2 pax includes:<br />
-          <br />
-          Cold Tofu with Hokkaido Scallop<br />
-          Sashimi of The Day<br />
-          Asuhos Tempura with Nanban Sauce<br />
-          Engawa Sushi<br />
-          Anago Sushi<br />
-          Grilled Mentaiko Stuffed Chicken Wing<br />
-          Lemon Shishamo<br />
-          Baby Abalone<br />
-          Signature Ramen with Soft Bone Pork<br />
-          Salmon Tataki<br />
-          Negitoro Don<br />
-          Dessert of The Day
-        </>
-        
-      )
+      return <img src={ramen_menu} alt="" />
     case "steakhouse":
-      return (
-        <>
-          recommended menu<br />
-          <br />
-          Promotion cannot be applied with any other in-house promotions. Please refer to the special conditions below for more details.<br />
-          <br />
-          <br />
-          * Menu and pricing subject to change without notice.<br />
-          ** All prices in SGD and are exclusive of GST and service charge unless otherwise indicated under special conditions.<br />
-        </>
-      )
+      return <img src={steakhouse_menu} alt="" />
     case "noodles":
-      return (
-        <>
-          recommended menu<br />
-          <br />
-          Promotion cannot be applied with any other in-house promotions. Please refer to the special conditions below for more details.<br />
-          <br />
-          <br />
-          * Menu and pricing subject to change without notice.<br />
-          ** All prices in SGD and are exclusive of GST and service charge unless otherwise indicated under special conditions.<br />
-        </>
-      )
+      return <img src={noodles_menu} alt="" />
     default:
-      return (
-        <>
-          recommended menu<br />
-          <br />
-          Promotion cannot be applied with any other in-house promotions. Please refer to the special conditions below for more details.<br />
-          <br />
-          <br />
-          * Menu and pricing subject to change without notice.<br />
-          ** All prices in SGD and are exclusive of GST and service charge unless otherwise indicated under special conditions.<br />
-        </>
-      )
+      return;
   }
 }
 
 function aboutSwitch(search) {
   switch (search) {
     case "ramen":
-      return (
-        <>
-          Beppu Menkan prides itself as one of the best spicy fried chicken ramen in town. Its name, ‘Beppu’, is where its cuisine is inspired from – a city within Kyushu, Japan. Located at China Square Central near Telok Ayer MRT station, the restaurant’s top dishes here include the char siew ramen set, beppu ramen, and their signature fried chicken ramen set.<br />
-          <br />
-          <br />
-          operating hours
-          <Divider light={false} variant="full-width" flexItem />
-        </>
-      )
+      return <img src={ramen_about} alt="" />
       case "steakhouse":
-        return (
-          <Typography>
-      
-          </Typography>
-        )
+        return <img src={steakhouse_about} alt="" />
       case "noodles":
-        return (
-          <Typography>
-      
-          </Typography>
-        )
+        return <img src={noodles_about} alt="" />
       default:
-        return (
-          <Typography>
-      
-          </Typography>
-        )  
+        return;
   }
 }
 
 function reviewSwitch(search) {
   switch (search) {
     case "ramen":
-      return (
-        <Typography>
-    
-        </Typography>
-      )
+      return <img src={ramen_reviews} alt="" />
       case "steakhouse":
-        return (
-          <Typography>
-      
-          </Typography>
-        )
+        return <img src={steakhouse_reviews} alt="" />
       case "noodles":
-        return (
-          <Typography>
-      
-          </Typography>
-        )
+        return <img src={noodles_reviews} alt="" />
       default:
-        return (
-          <Typography>
-      
-          </Typography>
-        )  
+        return;
   }
 }
