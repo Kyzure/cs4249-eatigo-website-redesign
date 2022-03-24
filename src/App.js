@@ -3,9 +3,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 import { HashRouter, Route, Routes } from "react-router-dom";
 import About from './pages/About.js';
+import Food from './pages/Food.js';
 import Home from './pages/Home.js';
 import Result from './pages/Result.js';
-import OriginalFood from './pages/Food.js';
 
 const theme = createTheme({
   palette: {
@@ -40,7 +40,7 @@ function App() {
             <Route path="" element={<About />} />
             <Route path="/home" element={<Home />} />
             <Route path="/result" element={<Result />} />
-            <Route path="/food" element={<OriginalFood />} />
+            <Route path="/food" element={<Food />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>
