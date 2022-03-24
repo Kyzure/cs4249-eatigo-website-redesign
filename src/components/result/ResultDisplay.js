@@ -43,6 +43,9 @@ function ResultDisplay(props) {
 
   return (
     <Box style={{ 'padding': '100px 250px 100px 250px' }}>
+      <Box sx={{ padding: "0px 0px 20px 0px" }}>
+        <BreadCrumbs path={props.path} page="Result" />
+      </Box>
       <Stack direction="column" spacing={'30px'}>
         <Stack direction="row" sx={{ height: '135px', padding: '40px 20px 40px 20px', backgroundColor: "#FFFFFF" }} spacing={'30px'}>
           <TextFieldStyled
@@ -64,9 +67,6 @@ function ResultDisplay(props) {
             Search
           </Button>
         </Stack>
-        <Box sx={{ padding: "0px 0px 0px 20px" }}>
-          <BreadCrumbs path={props.path} page="Result" />
-        </Box>
         <Stack direction="row" spacing={'30px'}>
           <Stack direction="column" sx={{ width: '30%' }} spacing={ '30px' }>
             <Button
