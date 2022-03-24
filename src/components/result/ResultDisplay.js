@@ -2,7 +2,7 @@ import * as React from 'react';
 import ViewMap from '../../assets/ViewMap.png';
 import ResultFilters from './ResultFilters.js';
 import ResultCardList from './ResultCardList.js';
-import { useLocation } from "react-router-dom";
+import BreadCrumbs from '../BreadCrumbs.js';
 
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
@@ -37,16 +37,9 @@ const TextFieldStyled = styled(TextField)(({ theme }) => ({
   },
 }));
 
-function useQuery() {
-  const { search } = useLocation();
-  return React.useMemo(() => new URLSearchParams(search), [search]);
-}
-
 
 function ResultDisplay(props) {
   const [isFilterSelected, setFilterSelected] = React.useState(false);
-
-  let query = useQuery();
 
   return (
     <Box style={{ 'padding': '100px 250px 100px 250px' }}>
@@ -71,6 +64,9 @@ function ResultDisplay(props) {
             Search
           </Button>
         </Stack>
+        <Box sx={{ padding: "0px 0px 0px 20px" }}>
+          <BreadCrumbs path={props.path} page="Result" />
+        </Box>
         <Stack direction="row" spacing={'30px'}>
           <Stack direction="column" sx={{ width: '30%' }} spacing={ '30px' }>
             <Button
@@ -80,12 +76,13 @@ function ResultDisplay(props) {
               <img style={{ width: '100%', height: '100%' }} src={ ViewMap } alt="View Map"/>
             </Button>
             <ResultFilters 
-              searchType={ query.get("search") }
+              searchType={ props.search }
+              resetsize={ props.resetsize }
               isFilterSelected={ isFilterSelected }
               setFilterSelected={ setFilterSelected } />
           </Stack>
           <ResultCardList
-            searchType={ query.get("search") }
+            searchType={ props.search }
             isFilterSelected={ isFilterSelected } />
         </Stack>
       </Stack>

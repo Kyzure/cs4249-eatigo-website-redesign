@@ -2,12 +2,10 @@ import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 import { HashRouter, Route, Routes } from "react-router-dom";
+import About from './pages/About.js';
 import Home from './pages/Home.js';
-import OriginalHome from './pages/OriginalHome.js';
-import RedesignedHome from './pages/RedesignedHome.js';
-import OriginalResult from './pages/OriginalResult.js';
-import RedesignedResult from './pages/RedesignedResult.js';
-import OriginalFood from './pages/OriginalFood.js';
+import Result from './pages/Result.js';
+import OriginalFood from './pages/Food.js';
 
 const theme = createTheme({
   palette: {
@@ -39,12 +37,10 @@ function App() {
       <ScopedCssBaseline enableColorScheme={true}>
         <HashRouter basename='/'>
           <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="/original-home" element={<OriginalHome />} />
-            <Route path="/redesigned-home" element={<RedesignedHome />} />
-            <Route path="/original-result" element={<OriginalResult />} />
-            <Route path="/redesigned-result" element={<RedesignedResult />} />
-            <Route path="/original-food-page" element={<OriginalFood />} />
+            <Route path="" element={<About />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/food" element={<OriginalFood />} />
           </Routes>
         </HashRouter>
       </ScopedCssBaseline>

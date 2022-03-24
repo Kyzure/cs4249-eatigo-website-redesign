@@ -12,21 +12,21 @@ import Button from '@mui/material/Button';
 
 function Header (props) {
   function GetSearchBar() {
-    if (props.isRedesigned) {
+    if (props.searchbar) {
       return <SearchBar
-        isRedesigned={ props.isRedesigned }
+        path={ props.path }
+        resetsize={ props.resetsize }
+        filters={ props.filters }
+        breadcrumbs={ props.breadcrumbs }
+        searchbar={ props.searchbar }
         styling={{ width: '70%', minWidth: '700px', margin: 'auto', justifyContent: 'center' }} 
         size="small"
         variant="outlined"/>;
     }
   }
-  
-  let ref = "/cs4249-eatigo-website-redesign/#/original-home";
 
-  if (props.isRedesigned) {
-    ref = "/cs4249-eatigo-website-redesign/#/redesigned-home";
-  }
-  
+  let ref = "/cs4249-eatigo-website-redesign/#/home?" + props.path
+
   return (
     <AppBar
       position="fixed"
