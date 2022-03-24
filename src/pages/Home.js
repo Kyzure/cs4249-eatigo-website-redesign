@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import loggingjs from '../logging.js';
+
 import { useLocation } from "react-router-dom";
 import Header from '../components/Header.js';
 import HomeDisplay from '../components/HomeDisplay.js';
@@ -17,6 +19,8 @@ function Home() {
   "resetsize=" + query.get("resetsize").toString() + "&" + 
   "searchbar=" + query.get("searchbar").toString()
 
+  loggingjs.setStart("home");
+  
   return (
     <div>
       <div>

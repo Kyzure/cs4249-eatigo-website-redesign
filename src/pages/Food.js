@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import loggingjs from '../logging.js';
+
 import { useLocation } from "react-router-dom";
 import Header from '../components/Header.js';
 import FoodDisplay from '../components/food/FoodDisplay.js';
@@ -16,6 +18,8 @@ function Food() {
   "filters=" + query.get("filters").toString() + "&" + 
   "resetsize=" + query.get("resetsize").toString() + "&" + 
   "searchbar=" + query.get("searchbar").toString()
+
+  loggingjs.setCheckpoint(query.get("search"));
 
   return (
     <div>
