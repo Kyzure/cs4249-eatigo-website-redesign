@@ -3,6 +3,7 @@ import '../styles/Header.scss';
 import EatigoIcon from "../assets/eatigo.png";
 import SearchBar from "./SearchBar.js";
 
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,6 +12,7 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 
 function Header (props) {
+  let navigate = useNavigate()
   function GetSearchBar() {
     if (props.searchbar) {
       return <SearchBar
@@ -25,7 +27,10 @@ function Header (props) {
     }
   }
 
-  let ref = "/cs4249-eatigo-website-redesign/#/home?" + props.path
+  function ReturnToHome() {
+    let ref = "/home?" + props.path
+    navigate(ref)
+  }
 
   return (
     <AppBar
@@ -37,7 +42,7 @@ function Header (props) {
             <Button
               disableRipple={true}
               variant="dense"
-              href={ ref }
+              onClick={ ReturnToHome }
               size="small"
               className="eatigo-homepage">
               <img className="eatigo-icon" src={EatigoIcon} alt="Eatigo Homepage"/>

@@ -12,7 +12,7 @@ function ResultCard(props) {
       return 
     }
     let path = "/food?" + props.path + "&search=" + props.searchType
-    return navigate(path, { replace: true });
+    return navigate(path);
   }
 
   return (

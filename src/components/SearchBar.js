@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '../styles/Home.scss';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
@@ -54,10 +54,8 @@ function HomeDisplay(props) {
       e.preventDefault();
       return
     }
-
     path += val
-
-    return navigate(path, { replace: true });
+    return navigate(path);
   }
 
   const setSearchValueFunc = (e) => {
