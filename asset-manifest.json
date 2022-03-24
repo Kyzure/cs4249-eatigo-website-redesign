@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css",
-    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.98c32822.js",
+    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.10000f06.js",
     "static/js/787.e28cefcf.chunk.js": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js",
     "static/media/food-background.jpg": "/cs4249-eatigo-website-redesign/static/media/food-background.2b3a0a494b30bf14f3b6.jpg",
     "static/media/Japanese2.png": "/cs4249-eatigo-website-redesign/static/media/Japanese2.21ce4da5fe19454611d1.png",
@@ -10,23 +10,42 @@
     "static/media/Noodles2.png": "/cs4249-eatigo-website-redesign/static/media/Noodles2.215f17bc79fd3f40ebb2.png",
     "static/media/Japanese1.png": "/cs4249-eatigo-website-redesign/static/media/Japanese1.bdaa54f2c89c5cb1c911.png",
     "static/media/SteakHouse2.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse2.e530bd3c064312128e93.png",
+    "static/media/Mediterranean2.png": "/cs4249-eatigo-website-redesign/static/media/Mediterranean2.08a217a948a405bd4d52.png",
+    "static/media/Mediterranean4.png": "/cs4249-eatigo-website-redesign/static/media/Mediterranean4.970157379abe7040cc6e.png",
+    "static/media/Malaysian1.png": "/cs4249-eatigo-website-redesign/static/media/Malaysian1.5d7511f35a56c9f1ab96.png",
+    "static/media/Mediterranean1.png": "/cs4249-eatigo-website-redesign/static/media/Mediterranean1.94d734021d87dac75683.png",
+    "static/media/Mediterranean3.png": "/cs4249-eatigo-website-redesign/static/media/Mediterranean3.c546d0d5c90dc410d475.png",
     "static/media/SteakHouse4.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse4.75eda74b20d2074ff6a0.png",
     "static/media/Noodles1.png": "/cs4249-eatigo-website-redesign/static/media/Noodles1.bbb1d7dd91a19b6a0d16.png",
     "static/media/Noodles5.png": "/cs4249-eatigo-website-redesign/static/media/Noodles5.b49cd98fed87e4e7667f.png",
+    "static/media/Burgers2.png": "/cs4249-eatigo-website-redesign/static/media/Burgers2.b98ceb432dc931b0b4c3.png",
+    "static/media/Burgers1.png": "/cs4249-eatigo-website-redesign/static/media/Burgers1.7463d841143fc42203cf.png",
+    "static/media/Burgers4.png": "/cs4249-eatigo-website-redesign/static/media/Burgers4.6e9b65a27edf7d85178f.png",
     "static/media/SteakHouse1.png": "/cs4249-eatigo-website-redesign/static/media/SteakHouse1.696216bb1cd7cbb7135f.png",
     "static/media/Noodles4.png": "/cs4249-eatigo-website-redesign/static/media/Noodles4.b56abf23b90f763ebce4.png",
+    "static/media/Burgers3.png": "/cs4249-eatigo-website-redesign/static/media/Burgers3.4c47fb0bbc7c52e50956.png",
     "static/media/Noodles3.png": "/cs4249-eatigo-website-redesign/static/media/Noodles3.993982e5f64130dd6038.png",
+    "static/media/Malaysian2.png": "/cs4249-eatigo-website-redesign/static/media/Malaysian2.827ba27422bc6f506cdd.png",
+    "static/media/noodles.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles.570d9f2f1f181941f779.jpg",
+    "static/media/noodles2.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles2.b7be3fd8f3595e554466.jpg",
+    "static/media/ramen.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen.7d14ed51ae3d18848d59.jpeg",
+    "static/media/steakhouse3.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse3.fead2993ee166151c262.jpg",
+    "static/media/noodles3.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles3.3300ec61a9a57bee6c8d.jpg",
+    "static/media/steakhouse2.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse2.db4d53ff1a72017152dc.jpg",
     "static/media/eatigo.png": "/cs4249-eatigo-website-redesign/static/media/eatigo.127e364ac8de80032319.png",
+    "static/media/ramen3.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen3.27b8e6ab6edbf20a1340.jpeg",
+    "static/media/steakhouse.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse.f74e4473712eafc45fd1.jpg",
+    "static/media/ramen2.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen2.12236e9b3f3e2e0ef1e4.jpeg",
     "static/media/ViewMap.png": "/cs4249-eatigo-website-redesign/static/media/ViewMap.75d8ccd6dcb2aa4ff280.png",
     "static/media/reservation-panel.png": "/cs4249-eatigo-website-redesign/static/media/reservation-panel.379d3352ce35051767a5.png",
     "static/media/eatigo-home-title.svg": "/cs4249-eatigo-website-redesign/static/media/eatigo-home-title.60626a0de0b7ed04e98bdeb257c68ccd.svg",
     "index.html": "/cs4249-eatigo-website-redesign/index.html",
     "main.1d1efd00.css.map": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css.map",
-    "main.98c32822.js.map": "/cs4249-eatigo-website-redesign/static/js/main.98c32822.js.map",
+    "main.10000f06.js.map": "/cs4249-eatigo-website-redesign/static/js/main.10000f06.js.map",
     "787.e28cefcf.chunk.js.map": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d1efd00.css",
-    "static/js/main.98c32822.js"
+    "static/js/main.10000f06.js"
   ]
 }
