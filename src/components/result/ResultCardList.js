@@ -16,6 +16,20 @@ import Noodles3 from '../../assets/Noodles3.png';
 import Noodles4 from '../../assets/Noodles4.png';
 import Noodles5 from '../../assets/Noodles5.png';
 
+import Malaysian1 from '../../assets/Malaysian1.png';
+import Malaysian2 from '../../assets/Malaysian2.png';
+
+import Burgers1 from '../../assets/Burgers1.png';
+import Burgers2 from '../../assets/Burgers2.png';
+import Burgers3 from '../../assets/Burgers3.png';
+import Burgers4 from '../../assets/Burgers4.png';
+
+import Mediterranean1 from '../../assets/Mediterranean1.png';
+import Mediterranean2 from '../../assets/Mediterranean2.png';
+import Mediterranean3 from '../../assets/Mediterranean3.png';
+import Mediterranean4 from '../../assets/Mediterranean4.png';
+
+
 import Stack from '@mui/material/Stack';
 
 const ramenList = [
@@ -74,6 +88,10 @@ const noodlesList = [
   },
 ];
 
+const malaysianList = [{ show: false, pic: Malaysian1 }, { show: false, pic: Malaysian2 }];
+const burgersList = [{ show: false, pic: Burgers1 }, { show: false, pic: Burgers2 }, { show: false, pic: Burgers3 }, { show: false, pic: Burgers4 }];
+const mediterraneanList = [{ show: false, pic: Mediterranean1 }, { show: false, pic: Mediterranean2 }, { show: false, pic: Mediterranean3 }, { show: false, pic: Mediterranean4 }];
+
 function ResultCardList(props) {
   function CardList() {
     if (props.isFilterSelected && props.searchType !== "steakhouse") {
@@ -88,6 +106,12 @@ function ResultCardList(props) {
         chosen = steakHouseList
       } else if (props.searchType === "noodles") {
         chosen = noodlesList
+      } else if (props.searchType === "malaysian") {
+        chosen = malaysianList
+      } else if (props.searchType === "burgers") {
+        chosen = burgersList
+      } else if (props.searchType === "mediterranean") {
+        chosen = mediterraneanList
       }
       const a = chosen.map((item) => {
         if (item.show) {

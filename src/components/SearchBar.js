@@ -42,14 +42,10 @@ function HomeDisplay(props) {
 
   function searchFunc(e) {
     let path = "/result?" + props.path + "&"
-
+    let lower = searchValue.toLowerCase()
     let val = searchValue
-    if (searchValue.toLowerCase() === "steakhouse") {
-      val = "search=steakhouse"
-    } else if (searchValue.toLowerCase() === "noodles") {
-      val = "search=noodles"
-    } else if (searchValue.toLowerCase() === "ramen") {
-      val = "search=ramen"
+    if (lower === "steakhouse" || lower === "noodles" || lower === "ramen" || lower === "malaysian" || lower === "burgers" || lower === "mediterranean") {
+      val = "search=" + lower
     } else {
       e.preventDefault();
       return
