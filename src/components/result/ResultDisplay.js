@@ -82,6 +82,7 @@ function ResultDisplay(props) {
               setFilterSelected={ setFilterSelected } />
           </Stack>
           <ResultCardList
+            path={ props.path }
             searchType={ props.search }
             isFilterSelected={ isFilterSelected } />
         </Stack>

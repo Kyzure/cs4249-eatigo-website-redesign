@@ -92,9 +92,13 @@ function ResultCardList(props) {
       }
       const a = chosen.map((item) => {
         if (item.show) {
-          return <ResultCard searchType={ props.searchType } key={item.pic} picture={item.pic} />
+          return <ResultCard
+            searchType={ props.searchType }
+            key={item.pic}
+            picture={item.pic}
+            path={ props.path }/>
         }
-        return <ResultCard key={item.pic} picture={item.pic} />
+        return <ResultCard key={item.pic} picture={item.pic} path={ props.path }/>
       }); 
       return a;
     }

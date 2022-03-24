@@ -4,16 +4,15 @@ import Button from '@mui/material/Button';
 import {useNavigate} from 'react-router-dom';
 
 function ResultCard(props) {
+  const navigate = useNavigate();
   
-  
-  function clickCard() {
-    if (props.searchType === "steakhouse") {
-      console.log("steakhouse")
-    } else if (props.searchType === "noodles") {
-      console.log("noodles")
-    } else if (props.searchType === "ramen") {
-      console.log("ramen")
+  function clickCard(e) {
+    if (props.searchType == null) {
+      e.preventDefault();
+      return 
     }
+    let path = "/food?" + props.path + "&search=" + props.searchType
+    return navigate(path, { replace: true });
   }
 
   return (
