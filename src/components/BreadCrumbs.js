@@ -14,6 +14,9 @@ function BreadCrumbs(props) {
     }
   }
 
+  if (props.breadcrumbs === null || !props.breadcrumbs) {
+    return (null)
+  }
   return (
     <Breadcrumbs aria-label="breadcrumb">
       <Link underline="hover" color="inherit" href={ homePath }>

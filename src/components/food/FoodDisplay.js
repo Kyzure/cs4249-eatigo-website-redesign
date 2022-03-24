@@ -21,7 +21,7 @@ function FoodDisplay(props) {
   return (
     <Box className="food-body">
         <Box>
-          <BreadCrumbs path={props.path} page="Food" search={props.search} />
+          <BreadCrumbs path={props.path} page="Food" search={props.search} breadcrumbs={ props.breadcrumbs }/>
         </Box>
       {titleSwitch(props.search)}
       <Stack direction="row" gap={2}>
