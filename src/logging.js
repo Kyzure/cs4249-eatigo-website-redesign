@@ -22,8 +22,8 @@ var TIME_LIMIT_EXCEEDED = 60;
 
 // These event types are intercepted for logging before jQuery handlers.
 var EVENT_TYPES_TO_LOG = {
-  mousedown: false,
-  keydown: false
+  mousedown: true,
+  keydown: true
 };
 
 // These event properties are copied to the log if present.
@@ -42,9 +42,11 @@ var GLOBAL_STATE_TO_LOG = function() {
 var loggingjs = (function() { // Immediately-Invoked Function Expression (IIFE); ref: http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 
 var startTime = 0;
+
 var startPoint = "";
 var checkPoint = "";
 var flags = {};
+var actions = 0;
 
 var acceptablePaths = {
 	"malaysian": ["home", "ramen"],
@@ -60,9 +62,9 @@ function hookEventsToLog() {
   // Set up low-level event capturing.  This intercepts all
   // native events before they bubble, so we log the state
   // *before* normal event processing.
-  // for (var event_type in EVENT_TYPES_TO_LOG) {
-    // document.addEventListener(event_type, logEvent, true);
-  // }
+  for (var event_type in EVENT_TYPES_TO_LOG) {
+    document.addEventListener(event_type, () => {actions += 1;});
+  }
 }
 
 // Returns a CSS selector that is descriptive of
@@ -124,26 +126,19 @@ function getUniqueId() {
 }
 
 function sendTimeReport(event, customName, customInfo) {
-  if (ENABLE_CONSOLE_LOGGING) {
-    console.log(customInfo);
-    console.log(customInfo.info.time, customInfo.info.fromTo, customInfo.info.metadata);
-  }
   if (ENABLE_NETWORK_LOGGING) {
-    sendNetworkLog(customInfo.info.time, customInfo.info.fromTo, customInfo.info.metadata);
+    sendTimeLog(customInfo.info.uuid, customInfo.info.time, customInfo.info.fromTo, customInfo.info.metadata);
   }
 }
 
 function sendErrorReport(event, customName, customInfo) {
-  if (ENABLE_CONSOLE_LOGGING) {
-    console.log(customInfo);
-    console.log(customInfo.info.errorRate, customInfo.info.fromTo, customInfo.info.metadata);
-  }
   if (ENABLE_NETWORK_LOGGING) {
-    sendNetworkLog(customInfo.info.errorRate, customInfo.info.fromTo, customInfo.info.metadata);
+    sendErrorLog(customInfo.info.uuid, customInfo.info.actions, customInfo.info.fromTo, customInfo.info.metadata);
   }
 }
 
 function setStart(name) {
+	console.log(name)
 	if (Date.now() / 1000 - startTime > TIME_LIMIT_EXCEEDED) {
 		startPoint = "";
 		checkPoint = "";
@@ -156,11 +151,15 @@ function setStart(name) {
 }
 
 function setCheckpoint(checkpoint){
+	console.log(checkpoint)
 	checkPoint = checkpoint;
 	flags[checkpoint] = true;
 }
 
 function setEnd(endPoint){
+	console.log(endPoint)
+	console.log(flags)
+	
 	if (!(endPoint in acceptablePaths)) {
 		return;
 	}
@@ -171,16 +170,19 @@ function setEnd(endPoint){
 		}
 	}
 	
-	if (true) {
-		// sendErrorReport();
-		sendTimeReport(null, 'timeEvent', {
-			eventName: 'time',
-			info: {'time': Date.now() / 1000 - startTime, 'fromTo': startPoint + '-' + checkPoint + '-' + endPoint, 'metadata': '???'}
-		});
-		startPoint = "";
-		checkPoint = "";
-		flags = {};
-	}
+	sendTimeReport(null, 'timeEvent', {
+		eventName: 'time',
+		info: {'uuid': getUniqueId(), 'time': Date.now() / 1000 - startTime, 'fromTo': startPoint + '-' + checkPoint + '-' + endPoint, 'metadata': '???'}
+	});
+	
+	sendErrorReport(null, 'errorEvent', {
+		eventName: 'error',
+		info: {'uuid': getUniqueId(), 'actions': actions, 'fromTo': startPoint + '-' + checkPoint + '-' + endPoint, 'metadata': '???'}
+	});
+	startPoint = "";
+	checkPoint = "";
+	flags = {};
+	actions = 0;
 }
 
 // OK, go.
@@ -222,12 +224,14 @@ return {
 //
 /////////////////////////////////////////////////////////////////////////////
 
-function sendNetworkLog(
+function sendTimeLog(
+	uuid,
     time,
 	fromTo,
 	metadata) {
   var formid = "e/1FAIpQLSewCG12btr9kmyq4l4DrN-YqRCy2vXNS3ZKo8qCcy0lQuImOg";
   var data = {
+    "entry.2067891172": uuid,
     "entry.1800144242": time,
     "entry.1325594305": fromTo,
     "entry.1035910747": metadata
@@ -241,8 +245,25 @@ function sendNetworkLog(
      "/formResponse?" + params.join("&");
 }
 
-
-
-
+function sendErrorLog(
+	uuid,
+    meaningfulactions,
+	fromto,
+	metadata) {
+  var formid = "e/1FAIpQLSdo19mYRtXUNVKYdIFwVzrqgIVTScMI6KUFW7bFV8el_1SbEA";
+  var data = {
+		"entry.279425833": uuid,
+		"entry.1302541332": meaningfulactions,
+		"entry.1826990510": fromto,
+		"entry.7910104": metadata
+  };
+  var params = [];
+  for (var key in data) {
+    params.push(key + "=" + encodeURIComponent(data[key]));
+  }
+  // Submit the form using an image to avoid CORS warnings; warning may still happen, but log will be sent. Go check result in Google Form
+  (new Image).src = "https://docs.google.com/forms/d/" + formid +
+     "/formResponse?" + params.join("&");
+}
 
 export default loggingjs;
