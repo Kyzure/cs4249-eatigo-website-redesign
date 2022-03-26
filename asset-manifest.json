@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css",
-    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.10000f06.js",
+    "main.js": "/cs4249-eatigo-website-redesign/static/js/main.bd043b1e.js",
     "static/js/787.e28cefcf.chunk.js": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js",
     "static/media/food-background.jpg": "/cs4249-eatigo-website-redesign/static/media/food-background.2b3a0a494b30bf14f3b6.jpg",
     "static/media/Japanese2.png": "/cs4249-eatigo-website-redesign/static/media/Japanese2.21ce4da5fe19454611d1.png",
@@ -26,26 +26,35 @@
     "static/media/Burgers3.png": "/cs4249-eatigo-website-redesign/static/media/Burgers3.4c47fb0bbc7c52e50956.png",
     "static/media/Noodles3.png": "/cs4249-eatigo-website-redesign/static/media/Noodles3.993982e5f64130dd6038.png",
     "static/media/Malaysian2.png": "/cs4249-eatigo-website-redesign/static/media/Malaysian2.827ba27422bc6f506cdd.png",
+    "static/media/noodles_menu.png": "/cs4249-eatigo-website-redesign/static/media/noodles_menu.629b8cf491b49c27138b.png",
     "static/media/noodles.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles.570d9f2f1f181941f779.jpg",
+    "static/media/ramen_reviews.png": "/cs4249-eatigo-website-redesign/static/media/ramen_reviews.cab16b60199b71fdab82.png",
     "static/media/noodles2.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles2.b7be3fd8f3595e554466.jpg",
+    "static/media/noodles_reviews.png": "/cs4249-eatigo-website-redesign/static/media/noodles_reviews.8bf3829eaaf35e6dd809.png",
+    "static/media/ramen_menu.png": "/cs4249-eatigo-website-redesign/static/media/ramen_menu.3b46c1f81ef0706a531f.png",
     "static/media/ramen.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen.7d14ed51ae3d18848d59.jpeg",
     "static/media/steakhouse3.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse3.fead2993ee166151c262.jpg",
     "static/media/noodles3.jpg": "/cs4249-eatigo-website-redesign/static/media/noodles3.3300ec61a9a57bee6c8d.jpg",
     "static/media/steakhouse2.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse2.db4d53ff1a72017152dc.jpg",
+    "static/media/steakhouse_about.png": "/cs4249-eatigo-website-redesign/static/media/steakhouse_about.3c07f8bea734ea0890f2.png",
+    "static/media/noodles_about.png": "/cs4249-eatigo-website-redesign/static/media/noodles_about.62c697a0558cc437f71c.png",
+    "static/media/steakhouse_reviews.png": "/cs4249-eatigo-website-redesign/static/media/steakhouse_reviews.1fe7c680f0d7895619ca.png",
+    "static/media/ramen_about.png": "/cs4249-eatigo-website-redesign/static/media/ramen_about.b8c6559626173972cedb.png",
     "static/media/eatigo.png": "/cs4249-eatigo-website-redesign/static/media/eatigo.127e364ac8de80032319.png",
     "static/media/ramen3.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen3.27b8e6ab6edbf20a1340.jpeg",
     "static/media/steakhouse.jpg": "/cs4249-eatigo-website-redesign/static/media/steakhouse.f74e4473712eafc45fd1.jpg",
+    "static/media/steakhouse_menu.png": "/cs4249-eatigo-website-redesign/static/media/steakhouse_menu.08aed70b574d875e98bf.png",
     "static/media/ramen2.jpeg": "/cs4249-eatigo-website-redesign/static/media/ramen2.12236e9b3f3e2e0ef1e4.jpeg",
     "static/media/ViewMap.png": "/cs4249-eatigo-website-redesign/static/media/ViewMap.75d8ccd6dcb2aa4ff280.png",
     "static/media/reservation-panel.png": "/cs4249-eatigo-website-redesign/static/media/reservation-panel.379d3352ce35051767a5.png",
     "static/media/eatigo-home-title.svg": "/cs4249-eatigo-website-redesign/static/media/eatigo-home-title.60626a0de0b7ed04e98bdeb257c68ccd.svg",
     "index.html": "/cs4249-eatigo-website-redesign/index.html",
     "main.1d1efd00.css.map": "/cs4249-eatigo-website-redesign/static/css/main.1d1efd00.css.map",
-    "main.10000f06.js.map": "/cs4249-eatigo-website-redesign/static/js/main.10000f06.js.map",
+    "main.bd043b1e.js.map": "/cs4249-eatigo-website-redesign/static/js/main.bd043b1e.js.map",
     "787.e28cefcf.chunk.js.map": "/cs4249-eatigo-website-redesign/static/js/787.e28cefcf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d1efd00.css",
-    "static/js/main.10000f06.js"
+    "static/js/main.bd043b1e.js"
   ]
 }
