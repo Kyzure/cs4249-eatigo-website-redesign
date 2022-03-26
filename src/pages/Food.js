@@ -19,6 +19,10 @@ function Food() {
   "resetsize=" + query.get("resetsize").toString() + "&" + 
   "searchbar=" + query.get("searchbar").toString()
 
+  loggingjs.setBreadcrumbs(query.get("breadcrumbs"));
+  loggingjs.setFilters(query.get("filters"));
+  loggingjs.setResetSize(query.get("resetsize"));
+  loggingjs.setSearchBars(query.get("searchbar"));
   loggingjs.setCheckpoint(query.get("search"));
 
   return (

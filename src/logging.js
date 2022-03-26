@@ -18,7 +18,7 @@ var ENABLE_NETWORK_LOGGING = true; // Controls network logging.
 var ENABLE_CONSOLE_LOGGING = true; // Controls console logging.
 var LOG_VERSION = '0.1';           // Labels every entry with version: "0.1".
 
-var TIME_LIMIT_EXCEEDED = 60;
+var TIME_LIMIT_EXCEEDED = 100;
 
 // These event types are intercepted for logging before jQuery handlers.
 var EVENT_TYPES_TO_LOG = {
@@ -47,6 +47,11 @@ var startPoint = "";
 var checkPoint = "";
 var flags = {};
 var actions = 0;
+var started = false;
+var breadcrumbs = "";
+var filters = "";
+var resetSize = "";
+var searchBars = "";
 
 var acceptablePaths = {
 	"malaysian": ["home", "ramen"],
@@ -125,20 +130,7 @@ function getUniqueId() {
   return localStorage['uid'];
 }
 
-function sendTimeReport(event, customName, customInfo) {
-  if (ENABLE_NETWORK_LOGGING) {
-    sendTimeLog(customInfo.info.uuid, customInfo.info.time, customInfo.info.fromTo, customInfo.info.metadata);
-  }
-}
-
-function sendErrorReport(event, customName, customInfo) {
-  if (ENABLE_NETWORK_LOGGING) {
-    sendErrorLog(customInfo.info.uuid, customInfo.info.actions, customInfo.info.fromTo, customInfo.info.metadata);
-  }
-}
-
 function setStart(name) {
-	console.log(name)
 	if (Date.now() / 1000 - startTime > TIME_LIMIT_EXCEEDED) {
 		startPoint = "";
 		checkPoint = "";
@@ -147,18 +139,24 @@ function setStart(name) {
 		startTime = Date.now() / 1000;
 		startPoint = name;
 		flags[name] = true;
+		started = true;
+		actions = 0;
 	}
 }
 
 function setCheckpoint(checkpoint){
-	console.log(checkpoint)
+	if (!started) {
+		return;
+	}
+	
 	checkPoint = checkpoint;
 	flags[checkpoint] = true;
 }
 
 function setEnd(endPoint){
-	console.log(endPoint)
-	console.log(flags)
+	if (!started) {
+		return;
+	}
 	
 	if (!(endPoint in acceptablePaths)) {
 		return;
@@ -170,19 +168,81 @@ function setEnd(endPoint){
 		}
 	}
 	
-	sendTimeReport(null, 'timeEvent', {
-		eventName: 'time',
-		info: {'uuid': getUniqueId(), 'time': Date.now() / 1000 - startTime, 'fromTo': startPoint + '-' + checkPoint + '-' + endPoint, 'metadata': '???'}
-	});
+	sendTimeLog(
+		getUniqueId(), 
+		Date.now() / 1000 - startTime, 
+		startPoint + '-' + checkPoint + '-' + endPoint,
+		breadcrumbs,
+		filters,
+		resetSize,
+		searchBars,
+		'???'
+	);
 	
-	sendErrorReport(null, 'errorEvent', {
-		eventName: 'error',
-		info: {'uuid': getUniqueId(), 'actions': actions, 'fromTo': startPoint + '-' + checkPoint + '-' + endPoint, 'metadata': '???'}
-	});
+	sendErrorLog(
+		getUniqueId(), 
+		actions, 
+		startPoint + '-' + checkPoint + '-' + endPoint,
+		breadcrumbs,
+		filters,
+		resetSize,
+		searchBars,
+		'???'
+	);
+		
 	startPoint = "";
 	checkPoint = "";
 	flags = {};
 	actions = 0;
+	started = false;
+	breadcrumbs = "";
+	filters = "";
+	resetSize = "";
+	searchBars = "";
+}
+
+function setBreadcrumbs(b) {
+	if (b != breadcrumbs) {
+		startPoint = "";
+		checkPoint = "";
+		flags = {};
+		actions = 0;
+		started = false;
+	}
+	breadcrumbs = b;
+}
+
+function setFilters(f) {
+	if (f != filters) {
+		startPoint = "";
+		checkPoint = "";
+		flags = {};
+		actions = 0;
+		started = false;
+	}
+	filters = f;
+}
+
+function setResetSize(r) {
+	if (r != resetSize) {
+		startPoint = "";
+		checkPoint = "";
+		flags = {};
+		actions = 0;
+		started = false;
+	}
+	resetSize = r;
+}
+
+function setSearchBars(s) {
+	if (s != searchBars) {
+		startPoint = "";
+		checkPoint = "";
+		flags = {};
+		actions = 0;
+		started = false;
+	}
+	searchBars = s;
 }
 
 // OK, go.
@@ -194,7 +254,11 @@ if (ENABLE_NETWORK_LOGGING) {
 return {
 	setStart,
 	setCheckpoint,
-	setEnd
+	setEnd,
+	setBreadcrumbs,
+	setFilters,
+	setResetSize,
+	setSearchBars
 };
 
 }());
@@ -227,13 +291,21 @@ return {
 function sendTimeLog(
 	uuid,
     time,
-	fromTo,
-	metadata) {
+    fromTo,
+    breadcrumbs,
+    filters,
+    resetsize,
+    searchbars,
+    metadata) {
   var formid = "e/1FAIpQLSewCG12btr9kmyq4l4DrN-YqRCy2vXNS3ZKo8qCcy0lQuImOg";
   var data = {
     "entry.2067891172": uuid,
     "entry.1800144242": time,
     "entry.1325594305": fromTo,
+    "entry.1016973632": breadcrumbs,
+    "entry.1832406357": filters,
+    "entry.126698526": resetsize,
+    "entry.157103977": searchbars,
     "entry.1035910747": metadata
   };
   var params = [];
@@ -246,16 +318,24 @@ function sendTimeLog(
 }
 
 function sendErrorLog(
-	uuid,
+    uuid,
     meaningfulactions,
-	fromto,
-	metadata) {
+    fromto,
+    breadcrumbs,
+    filters,
+    resetsize,
+    searchbars,
+    metadata) {
   var formid = "e/1FAIpQLSdo19mYRtXUNVKYdIFwVzrqgIVTScMI6KUFW7bFV8el_1SbEA";
   var data = {
-		"entry.279425833": uuid,
-		"entry.1302541332": meaningfulactions,
-		"entry.1826990510": fromto,
-		"entry.7910104": metadata
+    "entry.279425833": uuid,
+    "entry.1302541332": meaningfulactions,
+    "entry.1826990510": fromto,
+    "entry.1446555930": breadcrumbs,
+    "entry.1479397531": filters,
+    "entry.1951447013": resetsize,
+    "entry.1991914520": searchbars,
+    "entry.7910104": metadata
   };
   var params = [];
   for (var key in data) {
