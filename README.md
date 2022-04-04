@@ -3,7 +3,9 @@ This is a redeisgn of the Eatigo website application made for the NUS module CS4
 
 ## Links
 GitHub URL: https://github.com/Kyzure/cs4249-eatigo-website-redesign
+
 GitHub Pages URL: https://kyzure.github.io/cs4249-eatigo-website-redesign/#/home?breadcrumbs=true&filters=true&resetsize=large&searchbar=true
+
 For different arrangement of the website, please edit the query string to be either true or false (E.g. breadcrumbs=false), or resetsize to be large, medium or small.
 
 ## Directories and Files
